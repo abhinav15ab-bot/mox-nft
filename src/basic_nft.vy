@@ -19,7 +19,7 @@ exports: erc721.__interface__
 
 NAME: constant(String[25]) = "Puppy NFT"
 SYMBOL: constant(String[5]) = "PNFT"
-BASE_URI: public(constant(String[7])) = "ipfs://"
+BASE_URI: public(constant(String[34])) = "https://gateway.pinata.cloud/ipfs/"
 EIP_712_VERSION: constant(String[1]) = "1"
 
 # ------------------------------------------------------------------
