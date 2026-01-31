@@ -8,9 +8,11 @@ def deploy_mood():
         happy_svg_uri = svg_to_base64_uri(happy_svg)
         print(happy_svg_uri)
     with open ("./img/sad.svg","r") as f:
-        sad_svg_uri = f.read()
-    
+        sad_svg = f.read()
+        sad_svg_uri = svg_to_base64_uri(sad_svg)
     mood_contract = mood_nft.deploy(happy_svg_uri,sad_svg_uri)
+    mood_contract.mint_nft()
+    print(f"TokenURI: {mood_contract.tokenURI(0)}")
 
 def moccasin_main():
     deploy_mood()
